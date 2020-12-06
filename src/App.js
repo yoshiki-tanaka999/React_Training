@@ -27,13 +27,10 @@ class App extends Component {
   render() {
     return(
       <div className="App">
-        <CardList name="Yoshiki">
-          {this.state.monsters.map(monster => (
-                <h1 key= { monster.id } > { monster.name } </h1>
-              ))}
-        </CardList>
+        {/* propsでcard-listに値を渡す */}
+        <CardList monsters= { this.state.monsters }/> 
       </div>
-    )
+    );
   }
 }
 
