@@ -11,7 +11,8 @@ class App extends Component {
 
     this.state = {
       string: 'Hello Diff.s',
-      monsters:[]
+      monsters:[],
+      searchField:''
     };
   }
 
@@ -27,6 +28,12 @@ class App extends Component {
   render() {
     return(
       <div className="App">
+        <input 
+          type='search' 
+          placeholder='search monsters'
+          onChange={ e => this.setState({ searchField:e.target.value })}
+
+        />
         {/* propsでcard-listに値を渡す */}
         <CardList monsters= { this.state.monsters }/> 
       </div>
