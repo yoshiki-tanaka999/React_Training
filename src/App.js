@@ -26,6 +26,11 @@ class App extends Component {
 
   // Viewみたいなもんか
   render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter( monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+      );
+
     return(
       <div className="App">
         <input 
@@ -35,7 +40,10 @@ class App extends Component {
 
         />
         {/* propsでcard-listに値を渡す */}
-        <CardList monsters= { this.state.monsters }/> 
+        <CardList monsters= { filteredMonsters }/> 
+
+        {/* フィルターなしバージョン */}
+        {/* <CardList monsters= { this.state.monsters }/>  */}  
       </div>
     );
   }
