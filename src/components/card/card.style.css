@@ -6,7 +6,7 @@
     border-radius: 5px;
     padding: 25px;
     cursor: pointer;
-    -moz-osx-font-smooting: grayscale;
+    -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
